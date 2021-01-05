@@ -1,0 +1,17 @@
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Reduced Cost Estimate,US East (N. Virginia),Web Servers,Amazon EC2,0,879.02,10548.24,USD,"Operating system (Linux), Quantity (16), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (a1.xlarge)"
+Reduced Cost Estimate,US East (N. Virginia),Application Servers,Amazon EC2,0,387.33,4647.96,USD,"Operating system (Linux), Quantity (10), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (t4g.large)"
+Reduced Cost Estimate,US East (N. Virginia),Database with multi-AZ replication,Amazon RDS for MySQL,0,2010.866,24130.39,USD,"Quantity (1), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (7 TB), Instance type (db.r6g.xlarge)"
+Reduced Cost Estimate,US East (N. Virginia),Application Load Balancer,Application Load Balancer,0,600.43,7205.16,USD,Number of Application Load Balancers (1)
+Reduced Cost Estimate,US East (N. Virginia),Static web content storage,S3 Standard,0,659.46,7913.52,USD,S3 Standard storage (28 TB per month)
+Reduced Cost Estimate,US East (N. Virginia),Static web content storage,Data Transfer,0,0,0.00,USD,"DT Inbound: Internet (16 TB per month), DT Inbound: All other regions (16 TB per month), DT Outbound: Amazon CloudFront (16 TB per month)"
+Reduced Cost Estimate,US East (N. Virginia),API Gateway,Amazon API Gateway,0,1913.1,22957.20,USD,"HTTP API requests units (millions), Average size of each request (34 KB), REST API request units (millions), Cache memory size (GB) (None), WebSocket message units (thousands), Average message size (32 KB), Requests (600 per month)"
+Increased Cost Estimate,US East (N. Virginia),Lambda Functions for SNS and S3 media resizing,AWS Lambda,0,110,1320.00,USD,Number of requests (300000000)
+
+The following modifications were made to the estimate:
+App servers: smaller size EC2, 50% less instances
+Web servers: smaller size EC2, 30% less instances
+S3 : 30% less storage
+Databse : 30% less storage
+
+No changes were made components charged by volume of transactions such as API Gateway or S3 Data Transfer because the assumption is that customer base size remains the same, and therefore the application needs to handle the same amount of transactions. 
