@@ -1,9 +1,16 @@
 Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
-Initial Cost Estimate,US East (N. Virginia),Web Servers,Amazon EC2,0,2036.1,24433.20,USD,"Operating system (Linux), Quantity (20), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (a1.2xlarge)"
-Initial Cost Estimate,US East (N. Virginia),Application Servers,Amazon EC2,0,1390.78,16689.36,USD,"Operating system (Linux), Quantity (20), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (t4g.xlarge)"
-Initial Cost Estimate,US East (N. Virginia),Database with multi-AZ replication,Amazon RDS for MySQL,0,2717.426,32609.11,USD,"Quantity (1), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (10 TB), Instance type (db.r6g.xlarge)"
-Initial Cost Estimate,US East (N. Virginia),Application Load Balancer,Application Load Balancer,0,600.43,7205.16,USD,Number of Application Load Balancers (1)
-Initial Cost Estimate,US East (N. Virginia),Static web content storage,S3 Standard,0,942.08,11304.96,USD,S3 Standard storage (40 TB per month)
-Initial Cost Estimate,US East (N. Virginia),Static web content storage,Data Transfer,0,0,0.00,USD,"DT Inbound: Internet (16 TB per month), DT Inbound: All other regions (16 TB per month), DT Outbound: Amazon CloudFront (16 TB per month)"
-Initial Cost Estimate,US East (N. Virginia),API Gateway,Amazon API Gateway,0,1913.1,22957.20,USD,"HTTP API requests units (millions), Average size of each request (34 KB), REST API request units (millions), Cache memory size (GB) (None), WebSocket message units (thousands), Average message size (32 KB), Requests (600 per month)"
-Increased Cost Estimate,US East (N. Virginia),Lambda Functions for SNS and S3 media resizing,AWS Lambda,0,110,1320.00,USD,Number of requests (300000000)
+Initial Estimate,US East (N. Virginia),Web Servers,Amazon EC2,0,2036.1,24433.20,USD,"Operating system (Linux), Quantity (20), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (a1.2xlarge)"
+Initial Estimate,US East (N. Virginia),Application Servers,Amazon EC2,0,1536.78,18441.36,USD,"Operating system (Linux), Quantity (20), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (100 GB), Instance type (t3a.xlarge)"
+Initial Estimate,US East (N. Virginia),Database with multi-AZ replication,Amazon RDS for MySQL,0,2717.426,32609.11,USD,"Quantity (1), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (10 TB), Instance type (db.r6g.xlarge)"
+Initial Estimate,US East (N. Virginia),Application Load Balancer,Application Load Balancer,0,616.85,7402.20,USD,Number of Application Load Balancers (2)
+Initial Estimate,US East (N. Virginia),Static web content storage,S3 Standard,0,942.08,11304.96,USD,S3 Standard storage (40 TB per month)
+Initial Estimate,US East (N. Virginia),Static web content storage,Data Transfer,0,0,0.00,USD,"DT Inbound: Internet (16 TB per month), DT Outbound: Amazon CloudFront (16 TB per month)"
+Initial Estimate,US East (N. Virginia),API Gateway,Amazon API Gateway,0,477.74,5732.88,USD,"HTTP API requests units (millions), Average size of each request (34 KB), REST API request units (millions), Cache memory size (GB) (1.6), WebSocket message units (thousands), Average message size (32 KB), Requests (100 per month), Requests (100 per month)"
+Initial Estimate,US East (N. Virginia),Lambda Functions for SNS and S3 media resizing,AWS Lambda,0,179.8,2157.60,USD,Number of requests (900000000)
+Initial Estimate,US East (N. Virginia),EIP Associated with NAT Gateway,Amazon Elastic IP,0,294.5,3534.00,USD,"Number of EC2 instances (20), Number of EIPs per instance (5)"
+Initial Estimate,US East (N. Virginia),NAT Gateway,Amazon Virtual Private Cloud (VPC),0,315.72,3788.64,USD,Number of NAT Gateways (4)
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
